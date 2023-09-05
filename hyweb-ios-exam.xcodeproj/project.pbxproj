@@ -19,6 +19,7 @@
 		B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328D2AA7611E00E5D972 /* BookListViewController.swift */; };
 		B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */; };
 		B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232912AA7614700E5D972 /* BookListViewModel.swift */; };
+		B03232942AA773D500E5D972 /* BookListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232932AA773D500E5D972 /* BookListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B032328D2AA7611E00E5D972 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelProtocol.swift; sourceTree = "<group>"; };
 		B03232912AA7614700E5D972 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		B03232932AA773D500E5D972 /* BookListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */,
 				B03232912AA7614700E5D972 /* BookListViewModel.swift */,
 				B032328D2AA7611E00E5D972 /* BookListViewController.swift */,
+				B03232932AA773D500E5D972 /* BookListCell.swift */,
 			);
 			path = BookList;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				B03232652AA750BA00E5D972 /* ViewController.swift in Sources */,
 				B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */,
 				B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */,
+				B03232942AA773D500E5D972 /* BookListCell.swift in Sources */,
 				B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */,
 				B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */,
 				B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */,
