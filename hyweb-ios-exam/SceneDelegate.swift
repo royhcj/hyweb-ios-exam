@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         
         // Start with AppCoordinator
-        let coordinator = AppCoordinator(dependencies: .init(bookService: BookService.shared))
+        let coordinator = AppCoordinator(dependencies: .init(bookService: RemoteBookService.shared))
         coordinator.start(with: viewController)
     }
 

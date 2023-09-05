@@ -21,6 +21,12 @@
 		B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232912AA7614700E5D972 /* BookListViewModel.swift */; };
 		B03232942AA773D500E5D972 /* BookListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232932AA773D500E5D972 /* BookListCell.swift */; };
 		B03232972AA77C1000E5D972 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232962AA77C1000E5D972 /* AppCoordinator.swift */; };
+		B03232992AA787AC00E5D972 /* MockBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232982AA787AC00E5D972 /* MockBookService.swift */; };
+		B032329B2AA787D700E5D972 /* RemoteBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032329A2AA787D700E5D972 /* RemoteBookService.swift */; };
+		B03232A02AA7887100E5D972 /* BookAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032329F2AA7887100E5D972 /* BookAPIBase.swift */; };
+		B03232A22AA7897900E5D972 /* BookAPI+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232A12AA7897900E5D972 /* BookAPI+Models.swift */; };
+		B03232A42AA78AC600E5D972 /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232A32AA78AC600E5D972 /* BookAPI.swift */; };
+		B03232A62AA78BA600E5D972 /* BookAPI+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		B03232912AA7614700E5D972 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		B03232932AA773D500E5D972 /* BookListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCell.swift; sourceTree = "<group>"; };
 		B03232962AA77C1000E5D972 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B03232982AA787AC00E5D972 /* MockBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookService.swift; sourceTree = "<group>"; };
+		B032329A2AA787D700E5D972 /* RemoteBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBookService.swift; sourceTree = "<group>"; };
+		B032329F2AA7887100E5D972 /* BookAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPIBase.swift; sourceTree = "<group>"; };
+		B03232A12AA7897900E5D972 /* BookAPI+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookAPI+Models.swift"; sourceTree = "<group>"; };
+		B03232A32AA78AC600E5D972 /* BookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
+		B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookAPI+Bridging.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,7 @@
 		B03232832AA75DC200E5D972 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B032329D2AA7882300E5D972 /* Platforms */,
 				B03232882AA75FDA00E5D972 /* BookService */,
 			);
 			path = Services;
@@ -136,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				B03232892AA7601E00E5D972 /* BookService.swift */,
+				B03232982AA787AC00E5D972 /* MockBookService.swift */,
+				B032329A2AA787D700E5D972 /* RemoteBookService.swift */,
 			);
 			path = BookService;
 			sourceTree = "<group>";
@@ -165,6 +180,25 @@
 				B03232962AA77C1000E5D972 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B032329D2AA7882300E5D972 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				B032329E2AA7884100E5D972 /* BookAPI */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		B032329E2AA7884100E5D972 /* BookAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B032329F2AA7887100E5D972 /* BookAPIBase.swift */,
+				B03232A12AA7897900E5D972 /* BookAPI+Models.swift */,
+				B03232A32AA78AC600E5D972 /* BookAPI.swift */,
+				B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */,
+			);
+			path = BookAPI;
 			sourceTree = "<group>";
 		};
 		F1E2AD8118AAD63C4B301C56 /* Pods */ = {
@@ -291,16 +325,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03232972AA77C1000E5D972 /* AppCoordinator.swift in Sources */,
+				B03232A02AA7887100E5D972 /* BookAPIBase.swift in Sources */,
 				B03232822AA75D5200E5D972 /* Book.swift in Sources */,
 				B03232872AA75E0B00E5D972 /* BookServiceProtocol.swift in Sources */,
+				B03232A62AA78BA600E5D972 /* BookAPI+Bridging.swift in Sources */,
+				B03232A22AA7897900E5D972 /* BookAPI+Models.swift in Sources */,
 				B032328A2AA7601E00E5D972 /* BookService.swift in Sources */,
 				B03232652AA750BA00E5D972 /* ViewController.swift in Sources */,
 				B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */,
+				B03232992AA787AC00E5D972 /* MockBookService.swift in Sources */,
 				B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */,
 				B03232942AA773D500E5D972 /* BookListCell.swift in Sources */,
 				B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */,
+				B03232A42AA78AC600E5D972 /* BookAPI.swift in Sources */,
 				B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */,
 				B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */,
+				B032329B2AA787D700E5D972 /* RemoteBookService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
