@@ -13,6 +13,12 @@
 		B03232652AA750BA00E5D972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232642AA750BA00E5D972 /* ViewController.swift */; };
 		B032326A2AA750BB00E5D972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03232692AA750BB00E5D972 /* Assets.xcassets */; };
 		B032326D2AA750BB00E5D972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B032326B2AA750BB00E5D972 /* LaunchScreen.storyboard */; };
+		B03232822AA75D5200E5D972 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232812AA75D5200E5D972 /* Book.swift */; };
+		B03232872AA75E0B00E5D972 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232862AA75E0B00E5D972 /* BookServiceProtocol.swift */; };
+		B032328A2AA7601E00E5D972 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232892AA7601E00E5D972 /* BookService.swift */; };
+		B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328D2AA7611E00E5D972 /* BookListViewController.swift */; };
+		B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */; };
+		B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232912AA7614700E5D972 /* BookListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		B03232692AA750BB00E5D972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B032326C2AA750BB00E5D972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B032326E2AA750BB00E5D972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03232812AA75D5200E5D972 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		B03232862AA75E0B00E5D972 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
+		B03232892AA7601E00E5D972 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		B032328D2AA7611E00E5D972 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelProtocol.swift; sourceTree = "<group>"; };
+		B03232912AA7614700E5D972 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,9 @@
 		B032325F2AA750BA00E5D972 /* hyweb-ios-exam */ = {
 			isa = PBXGroup;
 			children = (
+				B03232802AA75ADF00E5D972 /* Domain */,
+				B03232832AA75DC200E5D972 /* Services */,
+				B032328B2AA7608F00E5D972 /* Views */,
 				B03232602AA750BA00E5D972 /* AppDelegate.swift */,
 				B03232622AA750BA00E5D972 /* SceneDelegate.swift */,
 				B03232642AA750BA00E5D972 /* ViewController.swift */,
@@ -79,13 +94,71 @@
 			path = "hyweb-ios-exam";
 			sourceTree = "<group>";
 		};
+		B03232802AA75ADF00E5D972 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B03232852AA75DF900E5D972 /* Models */,
+				B03232842AA75DEA00E5D972 /* ServiceInterfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B03232832AA75DC200E5D972 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B03232882AA75FDA00E5D972 /* BookService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B03232842AA75DEA00E5D972 /* ServiceInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B03232862AA75E0B00E5D972 /* BookServiceProtocol.swift */,
+			);
+			path = ServiceInterfaces;
+			sourceTree = "<group>";
+		};
+		B03232852AA75DF900E5D972 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B03232812AA75D5200E5D972 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B03232882AA75FDA00E5D972 /* BookService */ = {
+			isa = PBXGroup;
+			children = (
+				B03232892AA7601E00E5D972 /* BookService.swift */,
+			);
+			path = BookService;
+			sourceTree = "<group>";
+		};
+		B032328B2AA7608F00E5D972 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B032328C2AA7611200E5D972 /* BookList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B032328C2AA7611200E5D972 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */,
+				B03232912AA7614700E5D972 /* BookListViewModel.swift */,
+				B032328D2AA7611E00E5D972 /* BookListViewController.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
 		F1E2AD8118AAD63C4B301C56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				428C920B9FC9DA77F5DBEC24 /* Pods-hyweb-ios-exam.debug.xcconfig */,
 				83DE75A8D7EBC7538F10A9A9 /* Pods-hyweb-ios-exam.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -203,9 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03232822AA75D5200E5D972 /* Book.swift in Sources */,
+				B03232872AA75E0B00E5D972 /* BookServiceProtocol.swift in Sources */,
+				B032328A2AA7601E00E5D972 /* BookService.swift in Sources */,
 				B03232652AA750BA00E5D972 /* ViewController.swift in Sources */,
 				B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */,
+				B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */,
 				B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */,
+				B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */,
+				B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
