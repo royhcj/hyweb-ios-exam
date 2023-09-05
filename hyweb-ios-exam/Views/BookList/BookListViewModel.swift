@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class BookListViewModel {
+class BookListViewModel: BookListViewModelProtocol {
     
     // MARK: - Observables
     var books: Observable<[Book]?> { _books.asObservable() }
@@ -24,7 +24,7 @@ class BookListViewModel {
     
     // MARK: - Actions
     func fetchBooks() {
-        dependencies.bookService.fetchBooks { [weak self]  result in
+        dependencies.bookService.fetchBooks { [weak self] result in
             switch result {
             case .success(let books):
                 self?._books.accept(books)

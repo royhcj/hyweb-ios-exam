@@ -20,6 +20,7 @@
 		B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */; };
 		B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232912AA7614700E5D972 /* BookListViewModel.swift */; };
 		B03232942AA773D500E5D972 /* BookListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232932AA773D500E5D972 /* BookListCell.swift */; };
+		B03232972AA77C1000E5D972 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232962AA77C1000E5D972 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelProtocol.swift; sourceTree = "<group>"; };
 		B03232912AA7614700E5D972 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		B03232932AA773D500E5D972 /* BookListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCell.swift; sourceTree = "<group>"; };
+		B03232962AA77C1000E5D972 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				B03232802AA75ADF00E5D972 /* Domain */,
 				B03232832AA75DC200E5D972 /* Services */,
 				B032328B2AA7608F00E5D972 /* Views */,
+				B03232952AA77BB000E5D972 /* Coordinator */,
 				B03232602AA750BA00E5D972 /* AppDelegate.swift */,
 				B03232622AA750BA00E5D972 /* SceneDelegate.swift */,
 				B03232642AA750BA00E5D972 /* ViewController.swift */,
@@ -154,6 +157,14 @@
 				B03232932AA773D500E5D972 /* BookListCell.swift */,
 			);
 			path = BookList;
+			sourceTree = "<group>";
+		};
+		B03232952AA77BB000E5D972 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B03232962AA77C1000E5D972 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		F1E2AD8118AAD63C4B301C56 /* Pods */ = {
@@ -279,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03232972AA77C1000E5D972 /* AppCoordinator.swift in Sources */,
 				B03232822AA75D5200E5D972 /* Book.swift in Sources */,
 				B03232872AA75E0B00E5D972 /* BookServiceProtocol.swift in Sources */,
 				B032328A2AA7601E00E5D972 /* BookService.swift in Sources */,

@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxOptional
+import RxViewController
 import SnapKit
 
 class BookListViewController: UIViewController {
@@ -36,7 +37,12 @@ class BookListViewController: UIViewController {
     private func createLayout() {
         title = "我的書櫃"
         
-        let collectionView = UICollectionView()
+        view.backgroundColor = .blue
+        
+        let collectionLayout = UICollectionViewFlowLayout()
+        collectionLayout.itemSize = UICollectionViewFlowLayout.automaticSize
+        collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionLayout)
         collectionView.contentInsetAdjustmentBehavior = .never
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
@@ -55,6 +61,11 @@ class BookListViewController: UIViewController {
             .bind(to: collectionView.rx.items(cellIdentifier: "BookListCell", cellType: BookListCell.self)) { index, book, cell in
                 cell.configure(with: book)
             }.disposed(by: bag)
+        
+        rx.viewWillAppear
+            .subscribe(onNext: { [weak self] _ in
+                self?.viewModel.fetchBooks()
+            }).disposed(by: bag)
     }
 }
 
