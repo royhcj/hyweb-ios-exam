@@ -21,6 +21,13 @@ class BookListViewController: UIViewController {
     private var collectionView: UICollectionView?
     private var closeButton: UIButton?
     
+    var route: ((Routes) -> Void)?
+    
+    enum Routes {
+        case close
+        case showBook(uuid: Int)
+    }
+    
     // MARK: - Object/View lifecycle
     init(viewModel: BookListViewModelProtocol) {
         self.viewModel = viewModel
@@ -90,8 +97,13 @@ class BookListViewController: UIViewController {
             }).disposed(by: bag)
         
         closeButton?.rx.tap
-            .subscribe(onNext: {
-                print("clicked close")
+            .subscribe(onNext: { [weak self] in
+                self?.route?(.close)
+            }).disposed(by: bag)
+        
+        collectionView.rx.modelSelected(Book.self)
+            .subscribe(onNext: { [weak self] book in
+                self?.route?(.showBook(uuid: book.uuid))
             }).disposed(by: bag)
     }
 }
