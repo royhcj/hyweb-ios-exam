@@ -34,6 +34,23 @@ class BookListViewModel: BookListViewModelProtocol {
         }
     }
     
+    func setBookFavorite(bookUuid: Int, isFavorite: Bool) {
+        dependencies.bookService.setFavorite(bookUuid: bookUuid, isFavorite: isFavorite) { [weak self] result in
+            switch result {
+            case .success:
+                var books = self?._books.value ?? []
+                guard let index = books.firstIndex(where: { $0.uuid == bookUuid }) else {
+                    return
+                }
+                books[index].isFavorite = isFavorite
+                self?._books.accept(books)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     // MARK: - Dependencies
     public var dependencies: Dependencies
     

@@ -20,13 +20,15 @@ class AppCoordinator {
         showBookList(over: sourceViewController)
     }
     
-    func showBookList(over sourceViewController: UIViewController) {
+    private func showBookList(over sourceViewController: UIViewController) {
         let viewModelDependencies = BookListViewModel.Dependencies(bookService: dependencies.bookService)
         let viewModel = BookListViewModel(dependencies: viewModelDependencies)
         let viewController = BookListViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .overFullScreen
         
-        sourceViewController.present(viewController, animated: false)
+        let navigationController = UINavigationController(rootViewController: viewController)
         
+        sourceViewController.present(navigationController, animated: false)
     }
     
     

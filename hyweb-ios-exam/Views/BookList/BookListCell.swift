@@ -28,6 +28,12 @@ class BookListCell: UICollectionViewCell {
         setupLayout()
     }
     
+    // MARK: - Cell View lifecycle
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bag = DisposeBag()
+    }
+    
     // MARK: - Layout
     private func setupLayout() {
         backgroundColor = .clear
@@ -41,17 +47,15 @@ class BookListCell: UICollectionViewCell {
         }
         
         let coverView = UIView()
-        coverView.translatesAutoresizingMaskIntoConstraints = false
-        coverView.backgroundColor = .green
         vstack.addArrangedSubview(coverView)
-        coverView.snp.makeConstraints {
-            $0.width.equalTo(coverView.snp.height).multipliedBy(110.0 / 154.0)
-        }
         
         let coverImageView = UIImageView()
-        coverImageView.translatesAutoresizingMaskIntoConstraints = false
         coverImageView.layer.cornerRadius = 4
+        coverImageView.clipsToBounds = true
         coverImageView.contentMode = .scaleAspectFill
+
+        coverImageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        coverImageView.setContentHuggingPriority(.defaultLow, for: .vertical)
         coverView.addSubview(coverImageView)
         coverImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -59,7 +63,8 @@ class BookListCell: UICollectionViewCell {
         self.coverImageView = coverImageView
         
         let favoriteButton = UIButton()
-        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
+        favoriteButton.setImage(UIImage(named: "icon-heart"), for: .normal)
+        favoriteButton.setImage(UIImage(named: "icon-heart-selected"), for: .selected)
         coverView.addSubview(favoriteButton)
         favoriteButton.snp.makeConstraints {
             $0.width.height.equalTo(44)
@@ -68,8 +73,8 @@ class BookListCell: UICollectionViewCell {
         self.favoriteButton = favoriteButton
         
         let titleLabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = UIColor(white: 0, alpha: 0.85)
+        titleLabel.font = UIFont(name: "PingFangTC-Regular", size: 14)
         titleLabel.numberOfLines = 2
         titleLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
         vstack.addArrangedSubview(titleLabel)

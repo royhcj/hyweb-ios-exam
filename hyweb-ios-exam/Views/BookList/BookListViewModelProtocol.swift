@@ -15,5 +15,5 @@ protocol BookListViewModelProtocol {
     
     // MARK: - Actions
     func fetchBooks()
-    
+    func setBookFavorite(bookUuid: Int, isFavorite: Bool)
 }
