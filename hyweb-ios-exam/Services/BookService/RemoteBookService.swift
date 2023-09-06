@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import IORequestable
 
 class RemoteBookService: BookServiceProtocol {
     static let shared = RemoteBookService()
@@ -25,5 +24,9 @@ class RemoteBookService: BookServiceProtocol {
                     completion(.failure(error))
                 }
             }
+    }
+    
+    func setFavorite(bookUuid: Int, isFavorite: Bool, completion: @escaping (Result<(), Error>) -> Void) {
+        completion(.failure(BookServiceError.invalidOperation))
     }
 }
