@@ -6,10 +6,10 @@ target 'hyweb-ios-exam' do
   use_frameworks!
 
   # Rx Pods
-  pod 'RxSwift', '~> 5.0'
-  pod 'RxCocoa', '~> 5.0'
-  pod 'RxOptional', '~> 4.1'
-  pod 'RxDataSources', '~> 4.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxOptional'
+  pod 'RxDataSources'
   pod 'RxViewController'
 
   # IQKeyboard
@@ -19,7 +19,7 @@ target 'hyweb-ios-exam' do
   pod 'SnapKit'
 
   # API
-  pod 'IORequestable'
+  pod 'IORequestable', :git => 'https://github.com/royhcj/IORequestable.git', :tag => '0.1.11'
 
   # Kingfisher
   pod 'Kingfisher'

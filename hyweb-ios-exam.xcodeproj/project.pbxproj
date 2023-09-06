@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56A2C6F8979B41BCCA293650 /* Pods_hyweb_ios_exam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B08B0460FB10F94CE3D0409 /* Pods_hyweb_ios_exam.framework */; };
+		748FFEB384D6CDEA07E600ED /* Pods_hyweb_ios_exam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895CB8709A48A9CFC1C53CE5 /* Pods_hyweb_ios_exam.framework */; };
 		B0030A542AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */; };
 		B0030A562AA87F4100CEF56B /* BookPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */; };
 		B0030A582AA8AC5300CEF56B /* LocalBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A572AA8AC5300CEF56B /* LocalBookService.swift */; };
@@ -34,9 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B08B0460FB10F94CE3D0409 /* Pods_hyweb_ios_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hyweb_ios_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		428C920B9FC9DA77F5DBEC24 /* Pods-hyweb-ios-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.debug.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.debug.xcconfig"; sourceTree = "<group>"; };
-		83DE75A8D7EBC7538F10A9A9 /* Pods-hyweb-ios-exam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.release.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.release.xcconfig"; sourceTree = "<group>"; };
+		895CB8709A48A9CFC1C53CE5 /* Pods_hyweb_ios_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hyweb_ios_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9AD6D2DE4B5B5C28F9FACE /* Pods-hyweb-ios-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.debug.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.debug.xcconfig"; sourceTree = "<group>"; };
 		B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookPersistenceStore.xcdatamodel; sourceTree = "<group>"; };
 		B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPersistenceStore.swift; sourceTree = "<group>"; };
 		B0030A572AA8AC5300CEF56B /* LocalBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBookService.swift; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		B03232A12AA7897900E5D972 /* BookAPI+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookAPI+Models.swift"; sourceTree = "<group>"; };
 		B03232A32AA78AC600E5D972 /* BookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookAPI+Bridging.swift"; sourceTree = "<group>"; };
+		FA40FF0B3D7F5A1FE9DC7350 /* Pods-hyweb-ios-exam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.release.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +69,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A2C6F8979B41BCCA293650 /* Pods_hyweb_ios_exam.framework in Frameworks */,
+				748FFEB384D6CDEA07E600ED /* Pods_hyweb_ios_exam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		181BC5830AA88A12158303C5 /* Frameworks */ = {
+		37EAAC3F37BDC25921A16BDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B08B0460FB10F94CE3D0409 /* Pods_hyweb_ios_exam.framework */,
+				895CB8709A48A9CFC1C53CE5 /* Pods_hyweb_ios_exam.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 				B032325F2AA750BA00E5D972 /* hyweb-ios-exam */,
 				B032325E2AA750BA00E5D972 /* Products */,
 				F1E2AD8118AAD63C4B301C56 /* Pods */,
-				181BC5830AA88A12158303C5 /* Frameworks */,
+				37EAAC3F37BDC25921A16BDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,8 +224,8 @@
 		F1E2AD8118AAD63C4B301C56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				428C920B9FC9DA77F5DBEC24 /* Pods-hyweb-ios-exam.debug.xcconfig */,
-				83DE75A8D7EBC7538F10A9A9 /* Pods-hyweb-ios-exam.release.xcconfig */,
+				8B9AD6D2DE4B5B5C28F9FACE /* Pods-hyweb-ios-exam.debug.xcconfig */,
+				FA40FF0B3D7F5A1FE9DC7350 /* Pods-hyweb-ios-exam.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -237,11 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B03232712AA750BB00E5D972 /* Build configuration list for PBXNativeTarget "hyweb-ios-exam" */;
 			buildPhases = (
-				D3755A7D3FE1702FAE9B377C /* [CP] Check Pods Manifest.lock */,
+				D58224331EA707068A3683E7 /* [CP] Check Pods Manifest.lock */,
 				B03232592AA750BA00E5D972 /* Sources */,
 				B032325A2AA750BA00E5D972 /* Frameworks */,
 				B032325B2AA750BA00E5D972 /* Resources */,
-				5AB435707D0B1C1B9BC7DB04 /* [CP] Embed Pods Frameworks */,
+				78A44B0FFB6AEA281098BB13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,7 +298,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5AB435707D0B1C1B9BC7DB04 /* [CP] Embed Pods Frameworks */ = {
+		78A44B0FFB6AEA281098BB13 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,7 +315,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3755A7D3FE1702FAE9B377C /* [CP] Check Pods Manifest.lock */ = {
+		D58224331EA707068A3683E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,7 +498,7 @@
 		};
 		B03232722AA750BB00E5D972 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 428C920B9FC9DA77F5DBEC24 /* Pods-hyweb-ios-exam.debug.xcconfig */;
+			baseConfigurationReference = 8B9AD6D2DE4B5B5C28F9FACE /* Pods-hyweb-ios-exam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,7 +525,7 @@
 		};
 		B03232732AA750BB00E5D972 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83DE75A8D7EBC7538F10A9A9 /* Pods-hyweb-ios-exam.release.xcconfig */;
+			baseConfigurationReference = FA40FF0B3D7F5A1FE9DC7350 /* Pods-hyweb-ios-exam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
