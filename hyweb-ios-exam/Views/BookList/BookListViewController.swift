@@ -19,6 +19,7 @@ class BookListViewController: UIViewController {
     private var bag = DisposeBag()
     
     private var collectionView: UICollectionView?
+    private var closeButton: UIButton?
     
     // MARK: - Object/View lifecycle
     init(viewModel: BookListViewModelProtocol) {
@@ -39,6 +40,8 @@ class BookListViewController: UIViewController {
         
         view.backgroundColor = .blue
         
+        isModalInPresentation = true
+        
         self.collectionView = {
             let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.333),
                                                                 heightDimension: .fractionalHeight(1)))
@@ -52,7 +55,6 @@ class BookListViewController: UIViewController {
             
             let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
             collectionView.contentInset = .init(top: 20, left: 0, bottom: 20, right: 0)
-            collectionView.contentInsetAdjustmentBehavior = .never
             view.addSubview(collectionView)
             collectionView.snp.makeConstraints {
                 $0.edges.equalToSuperview()
@@ -60,6 +62,12 @@ class BookListViewController: UIViewController {
             collectionView.register(BookListCell.self, forCellWithReuseIdentifier: "BookListCell")
             return collectionView
         }()
+        
+        let closeButton = UIButton()
+        closeButton.setImage(UIImage(named: "close"), for: .normal)
+        self.closeButton = closeButton
+        
+        navigationItem.rightBarButtonItem = .init(customView: closeButton)
     }
     
     // MARK: - Binding
@@ -68,13 +76,22 @@ class BookListViewController: UIViewController {
         
         viewModel.books
             .filterNil()
-            .bind(to: collectionView.rx.items(cellIdentifier: "BookListCell", cellType: BookListCell.self)) { index, book, cell in
+            .bind(to: collectionView.rx.items(cellIdentifier: "BookListCell", cellType: BookListCell.self)) { [weak self] index, book, cell in
                 cell.configure(with: book)
+                cell.favoriteButton?.rx.tap
+                    .subscribe(onNext: {
+                        self?.viewModel.setBookFavorite(bookUuid: book.uuid, isFavorite: book.isFavorite != true)
+                    }).disposed(by: cell.bag)
             }.disposed(by: bag)
         
         rx.viewWillAppear
             .subscribe(onNext: { [weak self] _ in
                 self?.viewModel.fetchBooks()
+            }).disposed(by: bag)
+        
+        closeButton?.rx.tap
+            .subscribe(onNext: {
+                print("clicked close")
             }).disposed(by: bag)
     }
 }
