@@ -29,4 +29,8 @@ class MockBookService: BookServiceProtocol {
             completion(.success(books))
         }
     }
+    
+    func setFavorite(bookUuid: Int, isFavorite: Bool, completion: @escaping (Result<(), Error>) -> Void) {
+        completion(.failure(BookServiceError.invalidOperation))
+    }
 }

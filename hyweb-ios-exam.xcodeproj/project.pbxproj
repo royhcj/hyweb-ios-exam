@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		56A2C6F8979B41BCCA293650 /* Pods_hyweb_ios_exam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B08B0460FB10F94CE3D0409 /* Pods_hyweb_ios_exam.framework */; };
+		B0030A542AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */; };
+		B0030A562AA87F4100CEF56B /* BookPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */; };
+		B0030A582AA8AC5300CEF56B /* LocalBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A572AA8AC5300CEF56B /* LocalBookService.swift */; };
+		B0030A5A2AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A592AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift */; };
 		B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232602AA750BA00E5D972 /* AppDelegate.swift */; };
 		B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232622AA750BA00E5D972 /* SceneDelegate.swift */; };
 		B03232652AA750BA00E5D972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232642AA750BA00E5D972 /* ViewController.swift */; };
@@ -33,6 +37,10 @@
 		2B08B0460FB10F94CE3D0409 /* Pods_hyweb_ios_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hyweb_ios_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428C920B9FC9DA77F5DBEC24 /* Pods-hyweb-ios-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.debug.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.debug.xcconfig"; sourceTree = "<group>"; };
 		83DE75A8D7EBC7538F10A9A9 /* Pods-hyweb-ios-exam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.release.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.release.xcconfig"; sourceTree = "<group>"; };
+		B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookPersistenceStore.xcdatamodel; sourceTree = "<group>"; };
+		B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPersistenceStore.swift; sourceTree = "<group>"; };
+		B0030A572AA8AC5300CEF56B /* LocalBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBookService.swift; sourceTree = "<group>"; };
+		B0030A592AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookPersistenceStore+Bridging.swift"; sourceTree = "<group>"; };
 		B032325D2AA750BA00E5D972 /* hyweb-ios-exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hyweb-ios-exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03232602AA750BA00E5D972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03232622AA750BA00E5D972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +82,16 @@
 				2B08B0460FB10F94CE3D0409 /* Pods_hyweb_ios_exam.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0030A512AA87E1700CEF56B /* BookPersistenceStore */ = {
+			isa = PBXGroup;
+			children = (
+				B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */,
+				B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */,
+				B0030A592AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift */,
+			);
+			path = BookPersistenceStore;
 			sourceTree = "<group>";
 		};
 		B03232542AA750BA00E5D972 = {
@@ -151,6 +169,7 @@
 				B03232892AA7601E00E5D972 /* BookService.swift */,
 				B03232982AA787AC00E5D972 /* MockBookService.swift */,
 				B032329A2AA787D700E5D972 /* RemoteBookService.swift */,
+				B0030A572AA8AC5300CEF56B /* LocalBookService.swift */,
 			);
 			path = BookService;
 			sourceTree = "<group>";
@@ -185,6 +204,7 @@
 		B032329D2AA7882300E5D972 /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
+				B0030A512AA87E1700CEF56B /* BookPersistenceStore */,
 				B032329E2AA7884100E5D972 /* BookAPI */,
 			);
 			path = Platforms;
@@ -332,11 +352,15 @@
 				B03232A22AA7897900E5D972 /* BookAPI+Models.swift in Sources */,
 				B032328A2AA7601E00E5D972 /* BookService.swift in Sources */,
 				B03232652AA750BA00E5D972 /* ViewController.swift in Sources */,
+				B0030A542AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld in Sources */,
 				B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */,
 				B03232992AA787AC00E5D972 /* MockBookService.swift in Sources */,
 				B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */,
+				B0030A582AA8AC5300CEF56B /* LocalBookService.swift in Sources */,
+				B0030A5A2AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift in Sources */,
 				B03232942AA773D500E5D972 /* BookListCell.swift in Sources */,
 				B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */,
+				B0030A562AA87F4100CEF56B /* BookPersistenceStore.swift in Sources */,
 				B03232A42AA78AC600E5D972 /* BookAPI.swift in Sources */,
 				B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */,
 				B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */,
@@ -548,6 +572,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */,
+			);
+			currentVersion = B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */;
+			path = BookPersistenceStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B03232552AA750BA00E5D972 /* Project object */;
 }
