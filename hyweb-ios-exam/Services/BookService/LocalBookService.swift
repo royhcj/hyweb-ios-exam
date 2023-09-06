@@ -8,7 +8,7 @@
 import Foundation
 
 class LocalBookService: BookServiceProtocol {
-    static let sahred = LocalBookService()
+    static let shared = LocalBookService()
     
     private init() {
     }
@@ -35,7 +35,7 @@ class LocalBookService: BookServiceProtocol {
     }
     
     func setFavorite(bookUuid: Int, isFavorite: Bool, completion: @escaping (Result<(), Error>) -> Void) {
-        BookPersistenceStore.shared.fetchBooks { result in
+        BookPersistenceStore.shared.setBookFavorite(uuid: bookUuid, isFavorite: isFavorite) { result in
             switch result {
             case .success:
                 completion(.success(()))
@@ -50,5 +50,9 @@ class LocalBookService: BookServiceProtocol {
                 }
             }
         }
+    }
+    
+    func merge(with remoteBooks: [Book], completion: @escaping (Result<(), Error>) -> Void) {
+        BookPersistenceStore.shared.merge(with: remoteBooks, completion: completion)
     }
 }

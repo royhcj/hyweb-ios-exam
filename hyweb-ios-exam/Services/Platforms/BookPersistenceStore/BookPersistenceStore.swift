@@ -18,7 +18,7 @@ class BookPersistenceStore {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "test_core_data")
+        let container = NSPersistentContainer(name: "BookPersistenceStore")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -44,7 +44,7 @@ class BookPersistenceStore {
     }
     
     func fetchBooks(completion: @escaping (Result<[BookEntity], Error>) -> Void) {
-        context.performAndWait {
+        context.perform {
             do {
                 let books = try self.context.fetch(BookEntity.fetchRequest())
                 DispatchQueue.main.async {
@@ -59,7 +59,7 @@ class BookPersistenceStore {
     }
     
     func setBookFavorite(uuid: Int, isFavorite: Bool, completion: @escaping (Result<Void, Error>) -> Void) {
-        context.performAndWait {
+        context.perform {
             do {
                 let request = BookEntity.fetchRequest()
                 let predicate = NSPredicate(format: "uuid == %d", uuid)
@@ -76,6 +76,31 @@ class BookPersistenceStore {
                     DispatchQueue.main.async {
                         completion(.failure(BookPersistenceStoreError.bookNotFound))
                     }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    func merge(with remoteBooks: [Book], completion: @escaping (Result<(), Error>) -> Void) {
+        context.perform {
+            do {
+                let books = try self.context.fetch(BookEntity.fetchRequest())
+                
+                for remoteBook in remoteBooks {
+                    if let index = books.firstIndex(where: { $0.uuid == remoteBook.uuid }) {
+                        books[index].update(with: remoteBook)
+                    } else {
+                        let book = BookEntity(context: self.context)
+                        book.update(with: remoteBook)
+                    }
+                }
+                try self.context.save()
+                DispatchQueue.main.async {
+                    completion(.success(()))
                 }
             } catch {
                 DispatchQueue.main.async {

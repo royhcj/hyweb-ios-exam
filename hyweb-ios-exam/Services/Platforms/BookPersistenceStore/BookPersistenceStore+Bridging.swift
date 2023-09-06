@@ -18,3 +18,14 @@ extension Book {
                   isFavorite: entity.isFavorite)
     }
 }
+
+extension BookEntity {
+    func update(with book: Book) {
+        uuid = Int32(book.uuid)
+        title = book.title
+        coverUrl = book.coverUrl?.absoluteString
+        publishDate = book.publishDate
+        publisher = book.publisher
+        author = book.author
+    }
+}
