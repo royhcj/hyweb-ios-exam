@@ -39,17 +39,27 @@ class BookListViewController: UIViewController {
         
         view.backgroundColor = .blue
         
-        let collectionLayout = UICollectionViewFlowLayout()
-        collectionLayout.itemSize = UICollectionViewFlowLayout.automaticSize
-        collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionLayout)
-        collectionView.contentInsetAdjustmentBehavior = .never
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        collectionView.register(BookListCell.self, forCellWithReuseIdentifier: "BookListCell")
-        self.collectionView = collectionView
+        self.collectionView = {
+            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.333),
+                                                                heightDimension: .fractionalHeight(1)))
+            item.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200)), subitems: [item])
+            group.contentInsets = .init(top: 0, leading: 15, bottom: 0, trailing: 15)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.interGroupSpacing = 20
+            let layout = UICollectionViewCompositionalLayout(section: section)
+            
+            let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+            collectionView.contentInset = .init(top: 20, left: 0, bottom: 20, right: 0)
+            collectionView.contentInsetAdjustmentBehavior = .never
+            view.addSubview(collectionView)
+            collectionView.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
+            collectionView.register(BookListCell.self, forCellWithReuseIdentifier: "BookListCell")
+            return collectionView
+        }()
     }
     
     // MARK: - Binding

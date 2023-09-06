@@ -44,14 +44,15 @@ class BookListCell: UICollectionViewCell {
         coverView.translatesAutoresizingMaskIntoConstraints = false
         coverView.backgroundColor = .green
         vstack.addArrangedSubview(coverView)
-        coverView.snp.makeConstraints {
-            $0.width.equalTo(coverView.snp.height).multipliedBy(110.0 / 154.0)
-        }
         
         let coverImageView = UIImageView()
         coverImageView.translatesAutoresizingMaskIntoConstraints = false
         coverImageView.layer.cornerRadius = 4
+        coverImageView.clipsToBounds = true
         coverImageView.contentMode = .scaleAspectFill
+
+        coverImageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        coverImageView.setContentHuggingPriority(.defaultLow, for: .vertical)
         coverView.addSubview(coverImageView)
         coverImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()

@@ -24,8 +24,9 @@ class AppCoordinator {
         let viewModelDependencies = BookListViewModel.Dependencies(bookService: dependencies.bookService)
         let viewModel = BookListViewModel(dependencies: viewModelDependencies)
         let viewController = BookListViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .overFullScreen
         
-        sourceViewController.present(viewController, animated: false)
+        sourceViewController.present(viewController, animated: true)
         
     }
     
