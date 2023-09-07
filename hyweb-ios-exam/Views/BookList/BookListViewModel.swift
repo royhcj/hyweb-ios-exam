@@ -12,10 +12,11 @@ import RxCocoa
 class BookListViewModel: BookListViewModelProtocol {
     
     // MARK: - Observables
-    var books: Observable<[Book]?> { _books.asObservable() }
+    var onBooksChanged: Observable<[Book]?> { books.asObservable() }
+    var onErrorMessage = PublishSubject<String>()
     
     // MARK: - Stores
-    private var _books = BehaviorRelay<[Book]?>(value: nil)
+    private var books = BehaviorRelay<[Book]?>(value: nil)
     
     // MARK: - Setup
     init(dependencies: Dependencies) {
@@ -27,7 +28,7 @@ class BookListViewModel: BookListViewModelProtocol {
         dependencies.bookService.fetchBooks { [weak self] result in
             switch result {
             case .success(let books):
-                self?._books.accept(books)
+                self?.books.accept(books)
             case .failure(let error):
                 print(error) // TODO: later
             }
@@ -38,15 +39,15 @@ class BookListViewModel: BookListViewModelProtocol {
         dependencies.bookService.setFavorite(bookUuid: bookUuid, isFavorite: isFavorite) { [weak self] result in
             switch result {
             case .success:
-                var books = self?._books.value ?? []
+                var books = self?.books.value ?? []
                 guard let index = books.firstIndex(where: { $0.uuid == bookUuid }) else {
                     return
                 }
                 books[index].isFavorite = isFavorite
-                self?._books.accept(books)
+                self?.books.accept(books)
                 
             case .failure(let error):
-                print(error)
+                self?.onErrorMessage.onNext(error.localizedDescription)
             }
         }
     }

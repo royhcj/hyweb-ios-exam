@@ -81,7 +81,7 @@ class BookListViewController: UIViewController {
     private func bindViewModel() {
         guard let collectionView = collectionView else { return }
         
-        viewModel.books
+        viewModel.onBooksChanged
             .filterNil()
             .bind(to: collectionView.rx.items(cellIdentifier: "BookListCell", cellType: BookListCell.self)) { [weak self] index, book, cell in
                 cell.configure(with: book)
@@ -90,6 +90,13 @@ class BookListViewController: UIViewController {
                         self?.viewModel.setBookFavorite(bookUuid: book.uuid, isFavorite: book.isFavorite != true)
                     }).disposed(by: cell.bag)
             }.disposed(by: bag)
+        
+        viewModel.onErrorMessage
+            .subscribe(onNext: { [weak self] message in
+                let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alert.addAction(.init(title: "確認", style: .cancel))
+                self?.present(alert, animated: true)
+            }).disposed(by: bag)
         
         rx.viewWillAppear
             .subscribe(onNext: { [weak self] _ in

@@ -11,7 +11,8 @@ import RxSwift
 protocol BookListViewModelProtocol {
     
     // MARK: - Observables
-    var books: Observable<[Book]?> { get }
+    var onBooksChanged: Observable<[Book]?> { get }
+    var onErrorMessage: PublishSubject<String> { get }
     
     // MARK: - Actions
     func fetchBooks()
