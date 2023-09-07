@@ -7,14 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		748FFEB384D6CDEA07E600ED /* Pods_hyweb_ios_exam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895CB8709A48A9CFC1C53CE5 /* Pods_hyweb_ios_exam.framework */; };
+		B0030A542AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */; };
+		B0030A562AA87F4100CEF56B /* BookPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */; };
+		B0030A582AA8AC5300CEF56B /* LocalBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A572AA8AC5300CEF56B /* LocalBookService.swift */; };
+		B0030A5A2AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0030A592AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift */; };
 		B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232602AA750BA00E5D972 /* AppDelegate.swift */; };
 		B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232622AA750BA00E5D972 /* SceneDelegate.swift */; };
 		B03232652AA750BA00E5D972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232642AA750BA00E5D972 /* ViewController.swift */; };
 		B032326A2AA750BB00E5D972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03232692AA750BB00E5D972 /* Assets.xcassets */; };
 		B032326D2AA750BB00E5D972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B032326B2AA750BB00E5D972 /* LaunchScreen.storyboard */; };
+		B03232822AA75D5200E5D972 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232812AA75D5200E5D972 /* Book.swift */; };
+		B03232872AA75E0B00E5D972 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232862AA75E0B00E5D972 /* BookServiceProtocol.swift */; };
+		B032328A2AA7601E00E5D972 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232892AA7601E00E5D972 /* BookService.swift */; };
+		B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328D2AA7611E00E5D972 /* BookListViewController.swift */; };
+		B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */; };
+		B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232912AA7614700E5D972 /* BookListViewModel.swift */; };
+		B03232942AA773D500E5D972 /* BookListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232932AA773D500E5D972 /* BookListCell.swift */; };
+		B03232972AA77C1000E5D972 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232962AA77C1000E5D972 /* AppCoordinator.swift */; };
+		B03232992AA787AC00E5D972 /* MockBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232982AA787AC00E5D972 /* MockBookService.swift */; };
+		B032329B2AA787D700E5D972 /* RemoteBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032329A2AA787D700E5D972 /* RemoteBookService.swift */; };
+		B03232A02AA7887100E5D972 /* BookAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032329F2AA7887100E5D972 /* BookAPIBase.swift */; };
+		B03232A22AA7897900E5D972 /* BookAPI+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232A12AA7897900E5D972 /* BookAPI+Models.swift */; };
+		B03232A42AA78AC600E5D972 /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232A32AA78AC600E5D972 /* BookAPI.swift */; };
+		B03232A62AA78BA600E5D972 /* BookAPI+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		895CB8709A48A9CFC1C53CE5 /* Pods_hyweb_ios_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hyweb_ios_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9AD6D2DE4B5B5C28F9FACE /* Pods-hyweb-ios-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.debug.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.debug.xcconfig"; sourceTree = "<group>"; };
+		B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookPersistenceStore.xcdatamodel; sourceTree = "<group>"; };
+		B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPersistenceStore.swift; sourceTree = "<group>"; };
+		B0030A572AA8AC5300CEF56B /* LocalBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBookService.swift; sourceTree = "<group>"; };
+		B0030A592AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookPersistenceStore+Bridging.swift"; sourceTree = "<group>"; };
 		B032325D2AA750BA00E5D972 /* hyweb-ios-exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hyweb-ios-exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03232602AA750BA00E5D972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03232622AA750BA00E5D972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +47,21 @@
 		B03232692AA750BB00E5D972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B032326C2AA750BB00E5D972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B032326E2AA750BB00E5D972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03232812AA75D5200E5D972 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		B03232862AA75E0B00E5D972 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
+		B03232892AA7601E00E5D972 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		B032328D2AA7611E00E5D972 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelProtocol.swift; sourceTree = "<group>"; };
+		B03232912AA7614700E5D972 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		B03232932AA773D500E5D972 /* BookListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCell.swift; sourceTree = "<group>"; };
+		B03232962AA77C1000E5D972 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B03232982AA787AC00E5D972 /* MockBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookService.swift; sourceTree = "<group>"; };
+		B032329A2AA787D700E5D972 /* RemoteBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBookService.swift; sourceTree = "<group>"; };
+		B032329F2AA7887100E5D972 /* BookAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPIBase.swift; sourceTree = "<group>"; };
+		B03232A12AA7897900E5D972 /* BookAPI+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookAPI+Models.swift"; sourceTree = "<group>"; };
+		B03232A32AA78AC600E5D972 /* BookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
+		B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookAPI+Bridging.swift"; sourceTree = "<group>"; };
+		FA40FF0B3D7F5A1FE9DC7350 /* Pods-hyweb-ios-exam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hyweb-ios-exam.release.xcconfig"; path = "Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748FFEB384D6CDEA07E600ED /* Pods_hyweb_ios_exam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37EAAC3F37BDC25921A16BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				895CB8709A48A9CFC1C53CE5 /* Pods_hyweb_ios_exam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0030A512AA87E1700CEF56B /* BookPersistenceStore */ = {
+			isa = PBXGroup;
+			children = (
+				B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */,
+				B0030A552AA87F4100CEF56B /* BookPersistenceStore.swift */,
+				B0030A592AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift */,
+			);
+			path = BookPersistenceStore;
+			sourceTree = "<group>";
+		};
 		B03232542AA750BA00E5D972 = {
 			isa = PBXGroup;
 			children = (
 				B032325F2AA750BA00E5D972 /* hyweb-ios-exam */,
 				B032325E2AA750BA00E5D972 /* Products */,
+				F1E2AD8118AAD63C4B301C56 /* Pods */,
+				37EAAC3F37BDC25921A16BDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +115,10 @@
 		B032325F2AA750BA00E5D972 /* hyweb-ios-exam */ = {
 			isa = PBXGroup;
 			children = (
+				B03232802AA75ADF00E5D972 /* Domain */,
+				B03232832AA75DC200E5D972 /* Services */,
+				B032328B2AA7608F00E5D972 /* Views */,
+				B03232952AA77BB000E5D972 /* Coordinator */,
 				B03232602AA750BA00E5D972 /* AppDelegate.swift */,
 				B03232622AA750BA00E5D972 /* SceneDelegate.swift */,
 				B03232642AA750BA00E5D972 /* ViewController.swift */,
@@ -64,6 +129,107 @@
 			path = "hyweb-ios-exam";
 			sourceTree = "<group>";
 		};
+		B03232802AA75ADF00E5D972 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B03232852AA75DF900E5D972 /* Models */,
+				B03232842AA75DEA00E5D972 /* ServiceInterfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B03232832AA75DC200E5D972 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B032329D2AA7882300E5D972 /* Platforms */,
+				B03232882AA75FDA00E5D972 /* BookService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B03232842AA75DEA00E5D972 /* ServiceInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B03232862AA75E0B00E5D972 /* BookServiceProtocol.swift */,
+			);
+			path = ServiceInterfaces;
+			sourceTree = "<group>";
+		};
+		B03232852AA75DF900E5D972 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B03232812AA75D5200E5D972 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B03232882AA75FDA00E5D972 /* BookService */ = {
+			isa = PBXGroup;
+			children = (
+				B03232892AA7601E00E5D972 /* BookService.swift */,
+				B03232982AA787AC00E5D972 /* MockBookService.swift */,
+				B032329A2AA787D700E5D972 /* RemoteBookService.swift */,
+				B0030A572AA8AC5300CEF56B /* LocalBookService.swift */,
+			);
+			path = BookService;
+			sourceTree = "<group>";
+		};
+		B032328B2AA7608F00E5D972 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B032328C2AA7611200E5D972 /* BookList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B032328C2AA7611200E5D972 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				B032328F2AA7614100E5D972 /* BookListViewModelProtocol.swift */,
+				B03232912AA7614700E5D972 /* BookListViewModel.swift */,
+				B032328D2AA7611E00E5D972 /* BookListViewController.swift */,
+				B03232932AA773D500E5D972 /* BookListCell.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		B03232952AA77BB000E5D972 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B03232962AA77C1000E5D972 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B032329D2AA7882300E5D972 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				B0030A512AA87E1700CEF56B /* BookPersistenceStore */,
+				B032329E2AA7884100E5D972 /* BookAPI */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		B032329E2AA7884100E5D972 /* BookAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B032329F2AA7887100E5D972 /* BookAPIBase.swift */,
+				B03232A12AA7897900E5D972 /* BookAPI+Models.swift */,
+				B03232A32AA78AC600E5D972 /* BookAPI.swift */,
+				B03232A52AA78BA600E5D972 /* BookAPI+Bridging.swift */,
+			);
+			path = BookAPI;
+			sourceTree = "<group>";
+		};
+		F1E2AD8118AAD63C4B301C56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B9AD6D2DE4B5B5C28F9FACE /* Pods-hyweb-ios-exam.debug.xcconfig */,
+				FA40FF0B3D7F5A1FE9DC7350 /* Pods-hyweb-ios-exam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B03232712AA750BB00E5D972 /* Build configuration list for PBXNativeTarget "hyweb-ios-exam" */;
 			buildPhases = (
+				D58224331EA707068A3683E7 /* [CP] Check Pods Manifest.lock */,
 				B03232592AA750BA00E5D972 /* Sources */,
 				B032325A2AA750BA00E5D972 /* Frameworks */,
 				B032325B2AA750BA00E5D972 /* Resources */,
+				78A44B0FFB6AEA281098BB13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,14 +297,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78A44B0FFB6AEA281098BB13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hyweb-ios-exam/Pods-hyweb-ios-exam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58224331EA707068A3683E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hyweb-ios-exam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B03232592AA750BA00E5D972 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03232972AA77C1000E5D972 /* AppCoordinator.swift in Sources */,
+				B03232A02AA7887100E5D972 /* BookAPIBase.swift in Sources */,
+				B03232822AA75D5200E5D972 /* Book.swift in Sources */,
+				B03232872AA75E0B00E5D972 /* BookServiceProtocol.swift in Sources */,
+				B03232A62AA78BA600E5D972 /* BookAPI+Bridging.swift in Sources */,
+				B03232A22AA7897900E5D972 /* BookAPI+Models.swift in Sources */,
+				B032328A2AA7601E00E5D972 /* BookService.swift in Sources */,
 				B03232652AA750BA00E5D972 /* ViewController.swift in Sources */,
+				B0030A542AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld in Sources */,
 				B03232612AA750BA00E5D972 /* AppDelegate.swift in Sources */,
+				B03232992AA787AC00E5D972 /* MockBookService.swift in Sources */,
+				B03232922AA7614700E5D972 /* BookListViewModel.swift in Sources */,
+				B0030A582AA8AC5300CEF56B /* LocalBookService.swift in Sources */,
+				B0030A5A2AA8AE7800CEF56B /* BookPersistenceStore+Bridging.swift in Sources */,
+				B03232942AA773D500E5D972 /* BookListCell.swift in Sources */,
 				B03232632AA750BA00E5D972 /* SceneDelegate.swift in Sources */,
+				B0030A562AA87F4100CEF56B /* BookPersistenceStore.swift in Sources */,
+				B03232A42AA78AC600E5D972 /* BookAPI.swift in Sources */,
+				B032328E2AA7611E00E5D972 /* BookListViewController.swift in Sources */,
+				B03232902AA7614100E5D972 /* BookListViewModelProtocol.swift in Sources */,
+				B032329B2AA787D700E5D972 /* RemoteBookService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +498,7 @@
 		};
 		B03232722AA750BB00E5D972 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9AD6D2DE4B5B5C28F9FACE /* Pods-hyweb-ios-exam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -285,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.hyweb-ios-exam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -296,6 +525,7 @@
 		};
 		B03232732AA750BB00E5D972 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA40FF0B3D7F5A1FE9DC7350 /* Pods-hyweb-ios-exam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.hyweb-ios-exam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -342,6 +572,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0030A522AA87E7100CEF56B /* BookPersistenceStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */,
+			);
+			currentVersion = B0030A532AA87E7100CEF56B /* BookPersistenceStore.xcdatamodel */;
+			path = BookPersistenceStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B03232552AA750BA00E5D972 /* Project object */;
 }

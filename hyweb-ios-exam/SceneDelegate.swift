@@ -26,6 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         
         window.makeKeyAndVisible()
+        
+        // Start with AppCoordinator
+        let coordinator = AppCoordinator(dependencies: .init(bookService: BookService.shared))
+        coordinator.start(with: viewController)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
